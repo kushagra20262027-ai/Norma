@@ -39,7 +39,7 @@ export default function StepUpload({ onUpload }: StepUploadProps) {
         
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-px bg-zinc-200 border border-zinc-200 w-full max-w-2xl overflow-hidden">
           <button 
-            className="p-12 bg-white flex flex-col items-center space-y-6 hover:bg-zinc-50 transition-colors group"
+            className="p-8 sm:p-12 bg-white flex flex-col items-center space-y-6 hover:bg-zinc-50 transition-colors group"
             onClick={() => setMode('camera')}
           >
             <div className="p-4 rounded-sm bg-zinc-100 text-zinc-600 group-hover:bg-zinc-950 group-hover:text-white transition-all">
@@ -52,7 +52,7 @@ export default function StepUpload({ onUpload }: StepUploadProps) {
           </button>
 
           <div 
-            className="p-12 bg-white flex flex-col items-center space-y-6 hover:bg-zinc-50 transition-colors group relative cursor-pointer"
+            className="p-8 sm:p-12 bg-white flex flex-col items-center space-y-6 hover:bg-zinc-50 transition-colors group relative cursor-pointer"
           >
             <input 
               type="file" 

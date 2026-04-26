@@ -98,7 +98,7 @@ export default function StepCrop({ imageUrl, onComplete, onBack }: StepCropProps
         </div>
       </div>
 
-      <div className="w-full max-w-sm space-y-10 px-4">
+      <div className="w-full max-w-sm space-y-8 sm:space-y-10 px-0 sm:px-4">
         <div className="space-y-4">
             <h4 className="text-left font-black text-zinc-950 uppercase tracking-[0.2em] text-[10px]">Dimensional Standard</h4>
             <div className="relative">

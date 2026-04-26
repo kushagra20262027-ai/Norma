@@ -72,7 +72,7 @@ export default function StepBGRemoval({ imageUrl, onComplete, onBack }: StepBGRe
 
   if (loading) {
     return (
-      <div className="flex flex-col items-center justify-center space-y-12 py-20 px-8 w-full max-w-md mx-auto">
+      <div className="flex flex-col items-center justify-center space-y-12 py-10 sm:py-20 px-4 sm:px-8 w-full max-w-md mx-auto">
         <div className="space-y-4 w-full text-center">
           <h3 className="text-[10px] font-bold text-zinc-600 uppercase tracking-[0.3em]">
             {progress < 100 ? "Initializing AI Engine..." : "Optimizing Neural Layers..."}
@@ -91,7 +91,7 @@ export default function StepBGRemoval({ imageUrl, onComplete, onBack }: StepBGRe
 
   if (error) {
     return (
-      <div className="flex flex-col items-center justify-center space-y-8 py-20 text-center">
+      <div className="flex flex-col items-center justify-center space-y-8 py-10 sm:py-20 px-4 sm:px-8 text-center">
         <div className="space-y-3">
           <h3 className="text-xs font-bold uppercase tracking-[0.2em] text-zinc-950">Initialization Failed</h3>
           <p className="text-xs text-zinc-600 max-w-xs leading-relaxed font-black">{error}</p>
@@ -141,7 +141,7 @@ export default function StepBGRemoval({ imageUrl, onComplete, onBack }: StepBGRe
           <ArrowLeft className="w-3 h-3 mr-2" />
           Previous
         </Button>
-        <Button onClick={() => previewUrl && onComplete(previewUrl)} className="bg-zinc-950 hover:bg-zinc-800 text-white rounded-none px-12 h-12 text-[10px] uppercase tracking-[0.2em] font-black">
+        <Button onClick={() => previewUrl && onComplete(previewUrl)} className="bg-zinc-950 hover:bg-zinc-800 text-white rounded-none px-6 sm:px-12 h-12 text-[10px] uppercase tracking-[0.2em] font-black">
           Confirm & Edit
         </Button>
       </div>

@@ -73,13 +73,13 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen bg-zinc-50 flex flex-col items-center justify-center p-6 md:p-12 font-sans">
+    <div className="min-h-screen bg-zinc-50 flex flex-col items-center justify-center p-4 sm:p-6 md:p-12 font-sans">
       <div className="w-full max-w-4xl animate-in fade-in duration-700 slide-in-from-bottom-4">
         {step === 'landing' ? (
           renderStep()
         ) : (
-          <Card className="bg-white border-zinc-200 rounded-none shadow-sm overflow-hidden">
-            <div className="p-8 md:p-12">
+          <Card className="bg-white border-zinc-200 rounded-none shadow-sm overflow-hidden w-full">
+            <div className="p-4 sm:p-8 md:p-12">
                 {renderStep()}
             </div>
           </Card>

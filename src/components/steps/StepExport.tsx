@@ -52,13 +52,13 @@ export default function StepExport({ imageUrl, blob, onReset }: StepExportProps)
 
   return (
     <div className="flex flex-col items-center space-y-12 py-6">
-      <div className="flex flex-col md:flex-row gap-12 w-full items-center justify-center">
+      <div className="flex flex-col md:flex-row gap-8 md:gap-12 w-full items-center justify-center">
         <div className="w-full max-w-[260px] aspect-[35/45] bg-white shadow-sm border border-zinc-200 p-1">
           <img src={optimizedUrl} alt="Final Asset" className="w-full h-full object-cover" />
         </div>
 
         <Card className="w-full max-w-sm rounded-none border-zinc-200 shadow-none">
-          <CardContent className="p-8 space-y-10">
+          <CardContent className="p-6 sm:p-8 space-y-8 sm:space-y-10">
             <div className="space-y-6">
                 <div className="flex justify-between items-end border-b border-zinc-200 pb-2">
                     <h4 className="text-[10px] font-black text-zinc-950 uppercase tracking-[0.2em]">NORMA Pipeline</h4>
@@ -103,7 +103,7 @@ export default function StepExport({ imageUrl, blob, onReset }: StepExportProps)
       </div>
 
       <div className="border-t border-zinc-200 pt-12 w-full max-w-xl">
-        <div className="grid grid-cols-2 gap-8 text-left">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8 text-center sm:text-left">
             <div className="space-y-1">
                 <h5 className="text-[9px] font-black uppercase tracking-widest text-zinc-950">Biometric Integrity</h5>
                 <p className="text-[11px] text-zinc-600 font-black">JPEG 2000 Compatible Scale</p>

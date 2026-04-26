@@ -27,7 +27,7 @@ export default function StepLanding({ onStart }: StepLandingProps) {
             </p>
         </div>
         <div className="flex flex-col sm:flex-row gap-3 justify-center pt-4">
-          <Button size="lg" onClick={onStart} className="text-xs uppercase tracking-[0.3em] px-12 h-14 bg-zinc-950 hover:bg-zinc-800 text-white rounded-none font-black shadow-xl shadow-zinc-200 transition-all">
+          <Button size="lg" onClick={onStart} className="text-xs uppercase tracking-[0.3em] w-full sm:w-auto px-8 sm:px-12 h-14 bg-zinc-950 hover:bg-zinc-800 text-white rounded-none font-black shadow-xl shadow-zinc-200 transition-all">
             Launch Session
             <ArrowRight className="w-4 h-4 ml-2" />
           </Button>
@@ -47,7 +47,7 @@ export default function StepLanding({ onStart }: StepLandingProps) {
             desc: 'Standardized background removal and biometric cropping running on your device.'
           }
         ].map((feature, i) => (
-          <div key={i} className="p-8 bg-white flex flex-col items-start text-left space-y-4">
+          <div key={i} className="p-6 sm:p-8 bg-white flex flex-col items-start text-left space-y-4">
             <div className="p-2 bg-zinc-50 border border-zinc-100 rounded-sm">
               <feature.icon className="w-4 h-4 text-zinc-950" />
             </div>
