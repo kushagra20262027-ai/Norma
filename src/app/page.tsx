@@ -1,6 +1,7 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
+import { useState, Suspense } from 'react';
+import { useSearchParams } from 'next/navigation';
 import StepLanding from '@/components/steps/StepLanding';
 import StepUpload from '@/components/steps/StepUpload';
 import StepBGRemoval from '@/components/steps/StepBGRemoval';
@@ -9,7 +10,11 @@ import StepExport from '@/components/steps/StepExport';
 import { Step, ImageData } from '@/lib/types';
 import { Card } from '@/components/ui/card';
 
-export default function Home() {
+function EditorContent() {
+  const searchParams = useSearchParams();
+  // URL check: ?success=true
+  const isPaid = searchParams.get('success') === 'true';
+
   const [step, setStep] = useState<Step>('landing');
   const [imageData, setImageData] = useState<ImageData>({
     originalUrl: null,
@@ -66,6 +71,7 @@ export default function Home() {
           imageUrl={imageData.croppedUrl!} 
           blob={imageData.blob!}
           onReset={reset}
+          isPaid={isPaid} // Passing the paid status
         />
       );
       default: return null;
@@ -85,12 +91,19 @@ export default function Home() {
           </Card>
         )}
       </div>
-      
       <footer className="mt-20 w-full max-w-4xl border-t border-zinc-200 pt-8 pb-12 flex flex-col items-center">
           <p className="text-zinc-500 text-[10px] text-center font-medium">
             © 2026 Kushagra Mishra • All Rights Reserved
           </p>
       </footer>
     </div>
+  );
+}
+
+export default function Home() {
+  return (
+    <Suspense fallback={<div>Loading Editor...</div>}>
+      <EditorContent />
+    </Suspense>
   );
 }
