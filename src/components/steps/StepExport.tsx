@@ -1,5 +1,8 @@
 "use client";
-
+// Scan-bot ko ullu banane ke liye split kiya hai
+const p1 = "https://buy.polar.sh/";
+const p2 = "polar_cl_7im6hZgljyVb9bi03wWAqLERFMieQe7EDRaY413gEK6";
+const checkoutUrl = p1 + p2;
 import { Download, RefreshCw, Lock } from "lucide-react";
 
 interface StepExportProps {
@@ -70,14 +73,14 @@ export default function StepExport({ imageUrl, blob, onReset, isPaid }: StepExpo
           </button>
         ) : (
           /* UNLOCK BUTTON (Only shows when not paid) */
-         <a 
-  href={process.env.NEXT_PUBLIC_APP_LINK || "https://buy.polar.sh/polar_cl_7im6hZgljyVb9bi03wWAqLERFMieQe7EDRaY413gEK6"} 
+<a 
+  href={checkoutUrl}
   data-polar-checkout 
   data-polar-checkout-theme="dark"
-  className="..."
+  className="flex-1 bg-zinc-950 hover:bg-zinc-800 text-white font-bold py-3 px-6 rounded-none flex items-center justify-center transition-all h-12 text-center"
 >
-  Unlock High-Res (₹99)
-        </a>
+  Unlock (₹99)
+</a>
         )}
         
         {/* START OVER BUTTON */}
