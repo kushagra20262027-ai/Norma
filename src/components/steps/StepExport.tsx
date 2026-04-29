@@ -70,12 +70,14 @@ export default function StepExport({ imageUrl, blob, onReset, isPaid }: StepExpo
           </button>
         ) : (
           /* UNLOCK BUTTON (Only shows when not paid) */
-          <a 
-            href={process.env.NEXT_PUBLIC_POLAR_CHECKOUT_URL || "#"}
-            className="flex-1 bg-zinc-950 hover:bg-zinc-800 text-white font-bold py-3 px-6 rounded-none flex items-center justify-center transition-all h-12 text-center"
-          >
-            Unlock High-Res (₹99)
-          </a>
+         <a 
+  href={process.env.NEXT_PUBLIC_APP_LINK || "#"} 
+  data-polar-checkout 
+  data-polar-checkout-theme="dark"
+  className="..."
+>
+  Unlock High-Res (₹99)
+        </a>
         )}
         
         {/* START OVER BUTTON */}
