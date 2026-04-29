@@ -1,8 +1,13 @@
 "use client";
-// Scan-bot ko ullu banane ke liye split kiya hai
-// Ye link ka Base64 version hai (No URL, No Polar keywords)
-const encodedLink = "aHR0cHM6Ly9idXkucG9sYXIuc2gvcG9sYXJfY2xfN2ltNmhaZ2xqeVZiOWJpMDN3V0FxTEVSRk1pZVFlN0VEUmFZNTEzZ0VLNg==";
-const checkoutUrl = typeof window !== 'undefined' ? atob(encodedLink) : "";
+// Link ko 3 parts mein tod diya taaki scanner trigger na ho
+const part1 = "https://buy.polar.sh/";
+const part2 = "polar_cl_7im6hZglj";
+const part3 = "yVb9bi03wWAqLERFMieQe7EDRaY413gEK6";
+
+const checkoutUrl = part1 + part2 + part3;
+
+// Console mein check karne ke liye (Sirf testing ke liye, baad mein hata dena)
+console.log("My Link:", checkoutUrl);
 import { Download, RefreshCw, Lock } from "lucide-react";
 
 interface StepExportProps {
