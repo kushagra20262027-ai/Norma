@@ -100,7 +100,7 @@ export default function StepExport({ imageUrl, blob, onReset, isPaid }: StepExpo
       
       {!isPaid && (
         <p className="text-[10px] text-zinc-400 uppercase tracking-widest font-bold">
-          Secure Payment via Polar.sh
+          Secure Payment  via Polar.sh
         </p>
       )}
     </div>
