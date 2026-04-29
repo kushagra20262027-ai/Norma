@@ -71,7 +71,7 @@ export default function StepExport({ imageUrl, blob, onReset, isPaid }: StepExpo
         ) : (
           /* UNLOCK BUTTON (Only shows when not paid) */
          <a 
-  href={process.env.NEXT_PUBLIC_APP_LINK || "#"} 
+  href={process.env.NEXT_PUBLIC_APP_LINK || "https://buy.polar.sh/polar_cl_7im6hZgljyVb9bi03wWAqLERFMieQe7EDRaY413gEK6"} 
   data-polar-checkout 
   data-polar-checkout-theme="dark"
   className="..."
